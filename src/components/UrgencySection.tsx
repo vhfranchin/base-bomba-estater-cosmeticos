@@ -13,19 +13,19 @@ const UrgencySection = () => {
           
           <div className="grid grid-cols-4 gap-4 max-w-md mx-auto mb-6">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-              <div className="text-2xl font-bold">05</div>
+              <div className="text-2xl font-bold">01</div>
               <div className="text-sm">Dias</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-              <div className="text-2xl font-bold">14</div>
+              <div className="text-2xl font-bold">00</div>
               <div className="text-sm">Horas</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-              <div className="text-2xl font-bold">27</div>
+              <div className="text-2xl font-bold">00</div>
               <div className="text-sm">Min</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-              <div className="text-2xl font-bold">43</div>
+              <div className="text-2xl font-bold">00</div>
               <div className="text-sm">Seg</div>
             </div>
           </div>
