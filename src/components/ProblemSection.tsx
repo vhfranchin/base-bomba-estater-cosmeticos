@@ -1,4 +1,3 @@
-
 import { X, CheckCircle } from 'lucide-react';
 
 const ProblemSection = () => {
@@ -12,7 +11,7 @@ const ProblemSection = () => {
   ];
 
   const solutions = [
-    "Unhas 3x mais fortes em 7 dias",
+    "Unhas 3x mais fortes em poucos dias",
     "Crescimento acelerado e saudável",
     "Proteção contra descamação",
     "Nutrição profunda e restauração",
@@ -69,7 +68,7 @@ const ProblemSection = () => {
             </div>
             <div className="mt-6 p-4 bg-green-100 rounded-lg text-center">
               <p className="text-green-700 font-bold">
-                Resultados visíveis em apenas 7 dias! 💅✨
+                Resultados visíveis em poucos dias! 💅✨
               </p>
             </div>
           </div>

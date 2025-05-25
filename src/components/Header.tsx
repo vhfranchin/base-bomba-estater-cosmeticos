@@ -1,3 +1,4 @@
+
 import { ShoppingCart, Star, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -31,7 +32,7 @@ const Header = () => {
 
             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
               A fórmula revolucionária com bioativos naturais que <strong>fortalece, 
-              protege e acelera o crescimento</strong> das suas unhas em apenas 7 dias!
+              protege e acelera o crescimento</strong> das suas unhas em poucos dias!
             </p>
 
             <div className="bg-white rounded-xl p-6 shadow-lg mb-6">
@@ -56,7 +57,7 @@ const Header = () => {
 
             <Button 
               className="w-full lg:w-auto bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
-              onClick={() => window.open('https://estatercosmeticos.com.br/produto/base-bomba---com-oz-nio-e-leos-essenciais', '_blank')}
+              onClick={() => window.open('https://wa.me/5511943703372', '_blank')}
             >
               <ShoppingCart className="w-5 h-5 mr-2" />
               QUERO UNHAS FORTES AGORA!

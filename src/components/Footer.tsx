@@ -1,5 +1,5 @@
 
-import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Youtube, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -32,7 +32,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-gray-300">
               <li>Base Bomba - R$ 40,00</li>
               <li>Fluido Bomba - R$ 80,00</li>
-              <li>Kit Completo - R$ 99,90</li>
+              <li>Kit Completo - R$ 109,90</li>
               <li>Outros Produtos</li>
             </ul>
           </div>
@@ -43,15 +43,15 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>(11) 9 9999-9999</span>
+                <span>+55 11 94370-3372</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span>contato@estater.com.br</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>São Paulo, SP</span>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <div>
+                  <div>R. Dr. Flávio Américo Maurano, 940</div>
+                  <div>Fazenda Morumbi, São Paulo - SP</div>
+                  <div>CEP: 05656-020</div>
+                </div>
               </div>
             </div>
           </div>
@@ -70,12 +70,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <div className="grid md:grid-cols-3 gap-4 items-center">
+          <div className="grid md:grid-cols-2 gap-4 items-center">
             <div className="text-sm text-gray-400">
               © 2024 Estater Cosméticos. Todos os direitos reservados.
-            </div>
-            <div className="text-sm text-gray-400">
-              CNPJ: 00.000.000/0001-00
             </div>
             <div className="text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a> | 

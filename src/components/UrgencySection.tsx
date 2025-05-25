@@ -93,7 +93,7 @@ const UrgencySection = () => {
 
           <Button 
             className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-4 px-12 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-xl"
-            onClick={() => window.open('https://estatercosmeticos.com.br/produto/base-bomba---com-oz-nio-e-leos-essenciais', '_blank')}
+            onClick={() => window.open('https://wa.me/5511943703372', '_blank')}
           >
             🛒 COMPRAR AGORA COM DESCONTO!
           </Button>

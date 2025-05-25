@@ -33,7 +33,7 @@ const UpsellSection = () => {
             </div>
             <Button 
               className="w-full bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 rounded-full"
-              onClick={() => window.open('https://estatercosmeticos.com.br/produto/base-bomba---com-oz-nio-e-leos-essenciais', '_blank')}
+              onClick={() => window.open('https://wa.me/5511943703372', '_blank')}
             >
               Comprar Apenas a Base
             </Button>
@@ -99,7 +99,7 @@ const UpsellSection = () => {
 
             <Button 
               className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 rounded-full text-lg transform hover:scale-105 transition-all duration-300 shadow-xl"
-              onClick={() => window.open('https://estatercosmeticos.com.br/produto/base-bomba---com-oz-nio-e-leos-essenciais', '_blank')}
+              onClick={() => window.open('https://wa.me/5511943703372', '_blank')}
             >
               <ShoppingCart className="w-5 h-5 mr-2" />
               QUERO O KIT COMPLETO!
