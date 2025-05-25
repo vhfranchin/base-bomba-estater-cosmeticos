@@ -26,6 +26,9 @@ const UpsellSection = () => {
             <div className="bg-white rounded-xl p-6 text-gray-900 mb-6">
               <h4 className="font-bold text-lg mb-2">Base Bomba</h4>
               <p className="text-sm text-gray-600 mb-4">Fortalecedor com bioativos naturais</p>
+              <div className="mb-2">
+                <span className="text-lg line-through text-gray-500">R$ 60,00</span>
+              </div>
               <div className="text-3xl font-bold text-pink-600">R$ 40,00</div>
             </div>
             <Button 
@@ -50,20 +53,28 @@ const UpsellSection = () => {
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
                 <h4 className="font-bold">Base Bomba (12ml)</h4>
                 <p className="text-sm">Fortalece e acelera o crescimento</p>
+                <div className="flex items-center justify-center gap-2 mt-2">
+                  <span className="text-sm line-through text-gray-600">R$ 60,00</span>
+                  <span className="font-bold text-green-700">R$ 40,00</span>
+                </div>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
                 <h4 className="font-bold">Fluido Bomba (12ml)</h4>
                 <p className="text-sm">Trata micose, fungos e hidrata cutículas</p>
+                <div className="flex items-center justify-center gap-2 mt-2">
+                  <span className="text-sm line-through text-gray-600">R$ 100,00</span>
+                  <span className="font-bold text-green-700">R$ 80,00</span>
+                </div>
               </div>
             </div>
 
             <div className="bg-white rounded-xl p-6 mb-6">
               <div className="flex items-center justify-center gap-4 mb-2">
-                <span className="text-xl line-through text-gray-500">R$ 120,00</span>
-                <span className="text-3xl font-bold text-green-600">R$ 99,90</span>
+                <span className="text-xl line-through text-gray-500">R$ 160,00</span>
+                <span className="text-3xl font-bold text-green-600">R$ 109,90</span>
               </div>
               <div className="bg-green-100 text-green-700 px-4 py-2 rounded-lg font-bold">
-                Economize R$ 20,10!
+                Economize R$ 50,10!
               </div>
             </div>
 
