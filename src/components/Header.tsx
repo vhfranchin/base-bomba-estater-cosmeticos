@@ -1,4 +1,3 @@
-
 import { ShoppingCart, Star, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -27,7 +26,7 @@ const Header = () => {
 
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               Transforme suas <span className="text-pink-600">Unhas Fracas</span> em 
-              <span className="text-purple-600"> Unhas de Aço!</span>
+              <span className="text-purple-600"> Unhas Fortes e Saudáveis!</span>
             </h1>
 
             <p className="text-xl text-gray-600 mb-6 leading-relaxed">

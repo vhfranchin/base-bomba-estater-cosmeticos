@@ -82,9 +82,9 @@ const UrgencySection = () => {
 
           <div className="bg-white rounded-xl p-6 max-w-md mx-auto mb-8 shadow-lg">
             <div className="text-center mb-4">
-              <div className="text-sm text-gray-500 line-through">De R$ 120,00</div>
-              <div className="text-3xl font-bold text-pink-600">Por apenas R$ 99,90</div>
-              <div className="text-green-600 font-medium">Kit Completo - Economize R$ 20,10</div>
+              <div className="text-sm text-gray-500 line-through">De R$ 160,00</div>
+              <div className="text-3xl font-bold text-pink-600">Por apenas R$ 109,90</div>
+              <div className="text-green-600 font-medium">Kit Completo - Economize R$ 50,10</div>
             </div>
             <div className="bg-green-100 text-green-700 p-3 rounded-lg text-sm font-medium">
               ✅ Ou R$ 40,00 apenas pela Base Bomba
