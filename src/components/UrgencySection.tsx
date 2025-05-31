@@ -1,8 +1,55 @@
 
 import { Clock, Shield, Truck, CreditCard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react';
 
 const UrgencySection = () => {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const endOfDay = new Date(now);
+      endOfDay.setHours(23, 59, 59, 999);
+      
+      const difference = endOfDay.getTime() - now.getTime();
+      
+      if (difference > 0) {
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((difference / 1000 / 60) % 60);
+        const seconds = Math.floor((difference / 1000) % 60);
+        
+        return {
+          days: 0,
+          hours,
+          minutes,
+          seconds
+        };
+      } else {
+        // Se passou da meia-noite, reinicia para próximo dia
+        return {
+          days: 0,
+          hours: 23,
+          minutes: 59,
+          seconds: 59
+        };
+      }
+    };
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    // Calcula o tempo inicial
+    setTimeLeft(calculateTimeLeft());
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (time: number) => {
+    return time.toString().padStart(2, '0');
+  };
+
   return (
     <section className="py-16 px-4 bg-white">
       <div className="max-w-4xl mx-auto text-center">
@@ -13,19 +60,19 @@ const UrgencySection = () => {
           
           <div className="grid grid-cols-4 gap-4 max-w-md mx-auto mb-6">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-              <div className="text-2xl font-bold">01</div>
+              <div className="text-2xl font-bold">{formatTime(timeLeft.days)}</div>
               <div className="text-sm">Dias</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-              <div className="text-2xl font-bold">00</div>
+              <div className="text-2xl font-bold">{formatTime(timeLeft.hours)}</div>
               <div className="text-sm">Horas</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-              <div className="text-2xl font-bold">00</div>
+              <div className="text-2xl font-bold">{formatTime(timeLeft.minutes)}</div>
               <div className="text-sm">Min</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-              <div className="text-2xl font-bold">00</div>
+              <div className="text-2xl font-bold">{formatTime(timeLeft.seconds)}</div>
               <div className="text-sm">Seg</div>
             </div>
           </div>
