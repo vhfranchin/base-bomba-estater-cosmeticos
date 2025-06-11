@@ -1,4 +1,5 @@
 
+import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Benefits from '@/components/Benefits';
 import Testimonials from '@/components/Testimonials';
@@ -10,6 +11,7 @@ import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Navigation />
       <Hero />
       <Benefits />
       <Testimonials />

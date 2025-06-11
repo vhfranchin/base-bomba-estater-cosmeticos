@@ -3,10 +3,10 @@ import { Button } from '@/components/ui/button';
 import { Star, Shield, CheckCircle } from 'lucide-react';
 
 const Hero = () => {
-  const whatsappLink = "https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Kit%20Bomba%20para%20fortalecer%20minhas%20unhas.%20Pode%20me%20ajudar?";
+  const whatsappLink = "https://wa.me/5511943703372?text=Olá!%20Tenho%20interesse%20no%20Kit%20Bomba%20para%20fortalecer%20minhas%20unhas.%20Pode%20me%20ajudar?";
 
   return (
-    <section className="bg-gradient-to-br from-pink-50 via-purple-50 to-pink-100 py-12 px-4">
+    <section id="produto" className="bg-gradient-to-br from-pink-50 via-purple-50 to-pink-100 py-12 px-4 mt-16">
       <div className="max-w-6xl mx-auto">
         {/* Prova Social no Topo */}
         <div className="text-center mb-8">
@@ -26,7 +26,7 @@ const Hero = () => {
             {/* Headline Poderosa */}
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               Transforme suas <span className="text-pink-600">Unhas Fracas</span> em 
-              <span className="text-purple-600"> Unhas Fortes</span> em 7 dias!
+              <span className="text-purple-600"> Unhas Fortes</span> já nos primeiros dias!
             </h1>
 
             {/* Subheadline com Autoridade */}
@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3 justify-center lg:justify-start">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">✨ Resultados visíveis em apenas 7 dias</span>
+                <span className="text-gray-700">✨ Resultados visíveis já nos primeiros dias</span>
               </div>
               <div className="flex items-center gap-3 justify-center lg:justify-start">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />

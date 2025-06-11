@@ -1,33 +1,47 @@
 
-import { ChevronDown, MessageCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const whatsappLink = "https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20no%20Kit%20Bomba%20para%20fortalecer%20minhas%20unhas.%20Pode%20me%20ajudar?";
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
 
   const faqs = [
     {
-      question: "Em quanto tempo verei resultados?",
-      answer: "A maioria das nossas clientes nota diferença já nos primeiros 7 dias de uso. Unhas mais fortes e resistentes aparecem rapidamente, enquanto o crescimento acelerado é visível em 2-3 semanas."
+      question: "Como usar o Kit Bomba corretamente?",
+      answer: "É muito simples! Primeiro aplique a Base Bomba como base fortalecedora, deixe secar por 2 minutos. Depois aplique o Fluido Bomba massageando suavemente nas unhas e cutículas. Use diariamente para melhores resultados."
     },
     {
-      question: "O Kit Bomba é seguro? Tem alguma contraindicação?",
-      answer: "Sim! O Kit Bomba é 100% natural e seguro. Não contém formol nem químicos agressivos. Pode ser usado por qualquer pessoa, incluindo gestantes e lactantes. Em caso de dúvidas específicas, consulte seu médico."
+      question: "Em quanto tempo vou ver os resultados?",
+      answer: "Você vai notar suas unhas mais fortes e resistentes já nos primeiros dias de uso! Os resultados completos de crescimento e fortalecimento aparecem em 2-3 semanas de uso contínuo."
     },
     {
-      question: "Como faço o pedido e qual a forma de pagamento?",
-      answer: "Super fácil! Clique no botão do WhatsApp, fale conosco e faremos seu pedido na hora. Aceitamos PIX (com desconto extra), cartão de crédito e débito. Entrega para todo o Brasil com frete grátis!"
+      question: "O Kit Bomba funciona em unhas muito fracas?",
+      answer: "Sim! O Kit Bomba foi desenvolvido especialmente para unhas fracas, quebradiças e que não crescem. Nossa fórmula com bioativos naturais fortalece a estrutura da unha desde a raiz."
     },
     {
-      question: "E se eu não gostar do produto?",
-      answer: "Temos 100% de confiança no Kit Bomba! Mas se por algum motivo você não ficar satisfeita, oferecemos garantia total. Entre em contato conosco pelo WhatsApp que resolveremos sua situação imediatamente."
+      question: "Qual o prazo de entrega?",
+      answer: "O prazo de entrega é de 3 a 14 dias úteis, variando conforme a região. Consulte sua região no momento da compra via WhatsApp para informações mais precisas."
+    },
+    {
+      question: "Tem garantia? E se não funcionar?",
+      answer: "Sim! Oferecemos garantia total de satisfação. Se por algum motivo você não ficar satisfeita com os resultados, devolvemos 100% do seu dinheiro. Sua satisfação é nossa prioridade."
+    },
+    {
+      question: "Como faço para comprar?",
+      answer: "É super fácil! Clique no botão do WhatsApp em qualquer lugar da página e converse diretamente conosco. Tiramos todas suas dúvidas e processamos seu pedido de forma rápida e segura."
     }
   ];
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section id="faq" className="py-16 px-4 bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -38,43 +52,47 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="space-y-4 mb-12">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div key={index} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
               <button
+                onClick={() => toggleItem(index)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <h3 className="font-bold text-lg text-gray-900">{faq.question}</h3>
-                <ChevronDown 
-                  className={`w-5 h-5 text-gray-500 transition-transform ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`} 
-                />
+                <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                  {faq.question}
+                </h3>
+                {openItems.includes(index) ? (
+                  <ChevronUp className="w-5 h-5 text-pink-600 flex-shrink-0" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-pink-600 flex-shrink-0" />
+                )}
               </button>
-              {openIndex === index && (
+              
+              {openItems.includes(index) && (
                 <div className="px-6 pb-4">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               )}
             </div>
           ))}
         </div>
 
-        {/* CTA para mais dúvidas */}
-        <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-center text-white">
-          <MessageCircle className="w-12 h-12 mx-auto mb-4 text-pink-200" />
-          <h3 className="text-2xl font-bold mb-4">Ainda tem dúvidas?</h3>
-          <p className="text-lg mb-6 opacity-90">
-            Nossa equipe especializada está pronta para te ajudar! 
-            Fale conosco agora mesmo pelo WhatsApp.
-          </p>
-          <Button 
-            className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg"
-            onClick={() => window.open(whatsappLink, '_blank')}
-          >
-            💬 FALAR COM ESPECIALISTA
-          </Button>
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Ainda tem dúvidas?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Nossa equipe está sempre disponível para ajudar você!
+            </p>
+            <button 
+              onClick={() => window.open('https://wa.me/5511943703372?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20o%20Kit%20Bomba.%20Podem%20me%20ajudar?', '_blank')}
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-colors"
+            >
+              💬 Falar no WhatsApp
+            </button>
+          </div>
         </div>
       </div>
     </section>
