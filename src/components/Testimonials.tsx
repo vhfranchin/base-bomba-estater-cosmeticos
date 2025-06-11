@@ -1,115 +1,109 @@
 
-import { Star, MessageCircle } from 'lucide-react';
+import { Star, Quote } from 'lucide-react';
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Marina Silva",
+      name: "Marina Santos",
+      age: "28 anos",
       location: "São Paulo, SP",
+      text: "Minha vida mudou depois do Kit Bomba! Em 10 dias minhas unhas estavam irreconhecíveis. Agora posso usar anéis sem vergonha!",
       rating: 5,
-      text: "Em 2 semanas minhas unhas estavam completamente diferentes! Mais fortes e com crescimento muito mais rápido. Recomendo demais!",
-      days: "15 dias de uso"
+      result: "Unhas 3x mais fortes em 10 dias"
     },
     {
-      name: "Ana Carolina",
-      location: "Rio de Janeiro, RJ", 
+      name: "Ana Julia",
+      age: "35 anos", 
+      location: "Rio de Janeiro, RJ",
+      text: "Sempre tive vergonha das minhas mãos. Hoje, 3 semanas depois, recebo elogios das amigas. Kit Bomba é milagroso!",
       rating: 5,
-      text: "Sofria com micose há anos. A Base Bomba não só curou como deixou minhas unhas lindas e saudáveis. Produto incrível!",
-      days: "3 semanas de uso"
+      result: "Crescimento de 0.5cm em 3 semanas"
     },
     {
-      name: "Juliana Costa",
-      location: "Belo Horizonte, MG",
+      name: "Camila Oliveira",
+      age: "24 anos",
+      location: "Belo Horizonte, MG", 
+      text: "Gastava uma fortuna no salão porque minhas unhas não cresciam. Com o Kit Bomba economizo e tenho resultados melhores!",
       rating: 5,
-      text: "Minhas unhas sempre quebravam. Agora elas crescem rapidinho e estão super resistentes. Valeu cada centavo!",
-      days: "1 mês de uso"
+      result: "Economia de R$ 400/mês no salão"
     },
     {
-      name: "Camila Santos",
+      name: "Jessica Lima",
+      age: "31 anos",
       location: "Brasília, DF",
+      text: "Desisti várias vezes de ter unhas bonitas. O Kit Bomba me devolveu a esperança! Agora tenho as unhas dos meus sonhos.",
       rating: 5,
-      text: "A descamação parou completamente! Minhas unhas estão lindas e eu me sinto muito mais confiante. Produto maravilhoso!",
-      days: "10 dias de uso"
-    },
-    {
-      name: "Fernanda Lima",
-      location: "Salvador, BA",
-      rating: 5,
-      text: "Resultado surpreendente! Não acreditava que algo natural pudesse ser tão eficaz. Minhas unhas nunca estiveram tão bonitas!",
-      days: "3 semanas de uso"
-    },
-    {
-      name: "Roberta Oliveira",
-      location: "Porto Alegre, RS",
-      rating: 5,
-      text: "Comprei o kit completo e não me arrependo. Minhas unhas cresceram muito e ficaram super hidratadas. Produto top!",
-      days: "1 mês de uso"
+      result: "Primeira vez com unhas grandes"
     }
   ];
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-pink-50 to-purple-50">
+    <section className="py-16 px-4 bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             O que Nossas <span className="text-pink-600">Clientes Dizem</span>
           </h2>
-          <p className="text-xl text-gray-600">
-            Mais de 2.000 mulheres já transformaram suas unhas com a Base Bomba
+          <p className="text-xl text-gray-600 mb-6">
+            Mais de 5.000 mulheres já transformaram suas unhas com o Kit Bomba
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4">
-            <div className="flex items-center">
+          <div className="flex items-center justify-center gap-2">
+            <div className="flex">
               {[1, 2, 3, 4, 5].map((star) => (
                 <Star key={star} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-lg font-bold text-gray-700">4.9/5 estrelas</span>
+            <span className="text-lg font-bold text-gray-700">4.9/5 • Avaliação média</span>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-500">{testimonial.location}</p>
-                </div>
-              </div>
-
-              <div className="flex items-center mb-3">
+            <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 relative">
+              <Quote className="w-8 h-8 text-pink-300 mb-4" />
+              
+              <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
 
-              <p className="text-gray-700 mb-4 leading-relaxed">"{testimonial.text}"</p>
-              
-              <div className="flex items-center justify-between">
-                <span className="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">
-                  ✅ {testimonial.days}
-                </span>
-                <MessageCircle className="w-4 h-4 text-gray-400" />
+              <p className="text-gray-700 mb-4 leading-relaxed italic">
+                "{testimonial.text}"
+              </p>
+
+              <div className="border-t pt-4 mt-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-500">{testimonial.age} • {testimonial.location}</p>
+                  </div>
+                  <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">
+                    ✅ {testimonial.result}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Junte-se a Milhares de Mulheres Satisfeitas!
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Sua transformação está a um clique de distância. Não deixe para amanhã o que você pode começar hoje!
-            </p>
-            <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-4 rounded-lg">
-              <p className="text-green-700 font-bold">
-                💬 "Se não funcionar, devolvemos 100% do seu dinheiro!" - Garantia Total
-              </p>
+        {/* Prova Social Adicional */}
+        <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Junte-se a Milhares de Mulheres Satisfeitas!
+          </h3>
+          <div className="grid grid-cols-3 gap-6 max-w-md mx-auto">
+            <div>
+              <div className="text-3xl font-bold text-pink-600">5.000+</div>
+              <div className="text-sm text-gray-600">Clientes Felizes</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-purple-600">98%</div>
+              <div className="text-sm text-gray-600">Satisfação</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-green-600">7 dias</div>
+              <div className="text-sm text-gray-600">Resultados</div>
             </div>
           </div>
         </div>

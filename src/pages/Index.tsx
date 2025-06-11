@@ -1,22 +1,22 @@
 
-import Header from '@/components/Header';
-import ProblemSection from '@/components/ProblemSection';
-import ProductDetails from '@/components/ProductDetails';
+import Hero from '@/components/Hero';
+import Benefits from '@/components/Benefits';
 import Testimonials from '@/components/Testimonials';
-import UpsellSection from '@/components/UpsellSection';
-import UrgencySection from '@/components/UrgencySection';
+import PricingOffer from '@/components/PricingOffer';
+import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
-      <ProblemSection />
-      <ProductDetails />
+      <Hero />
+      <Benefits />
       <Testimonials />
-      <UpsellSection />
-      <UrgencySection />
+      <PricingOffer />
+      <FAQ />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
