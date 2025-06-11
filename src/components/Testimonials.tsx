@@ -8,48 +8,42 @@ const Testimonials = () => {
       age: "28 anos",
       location: "São Paulo, SP",
       text: "Minhas unhas sempre foram fracas e quebravam facilmente. Com o Kit Bomba, em poucos dias já notei diferença! Agora elas crescem fortes e saudáveis. Recomendo muito!",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b830?w=150&h=150&fit=crop&crop=face"
+      rating: 5
     },
     {
       name: "Carla Oliveira",
       age: "35 anos", 
       location: "Rio de Janeiro, RJ",
       text: "Estava desesperada com o estado das minhas unhas. O Kit Bomba foi a solução perfeita! Resultados visíveis já na primeira semana. Melhor investimento que fiz!",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      rating: 5
     },
     {
       name: "Ana Costa",
       age: "42 anos",
       location: "Belo Horizonte, MG", 
       text: "Tentei vários produtos antes, mas nenhum funcionou como o Kit Bomba. Minhas unhas estão mais bonitas do que nunca! Minha autoestima mudou completamente.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+      rating: 5
     },
     {
       name: "Juliana Lima",
       age: "31 anos",
       location: "Porto Alegre, RS",
       text: "Incrível como o Kit Bomba transformou minhas unhas! Eram fracas e descascavam, agora são fortes e crescem rapidinho. Produto sensacional, super indico!",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&h=150&fit=crop&crop=face"
+      rating: 5
     },
     {
       name: "Patrícia Ferreira",
       age: "39 anos",
       location: "Salvador, BA",
       text: "Estava cética no início, mas o Kit Bomba realmente funciona! Minhas unhas nunca estiveram tão saudáveis. Comprei mais kits para garantir que não vou ficar sem!",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face"
+      rating: 5
     },
     {
       name: "Fernanda Rocha",
       age: "26 anos",
       location: "Brasília, DF",
       text: "O Kit Bomba mudou minha vida! Sempre tive vergonha das minhas unhas, mas agora elas são meu orgulho. Produto fantástico, vale cada centavo!",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
+      rating: 5
     }
   ];
 
@@ -78,16 +72,9 @@ const Testimonials = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="flex items-center gap-4 mb-4">
-                <img 
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-500">{testimonial.age} • {testimonial.location}</p>
-                </div>
+              <div className="mb-4">
+                <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
+                <p className="text-sm text-gray-500">{testimonial.age} • {testimonial.location}</p>
               </div>
 
               <div className="flex items-center gap-1 mb-3">
@@ -123,7 +110,7 @@ const Testimonials = () => {
               <div className="text-sm opacity-90">Recomendação</div>
             </div>
             <div>
-              <div className="text-3xl font-bold">3 anos</div>
+              <div className="text-3xl font-bold">5 anos</div>
               <div className="text-sm opacity-90">No Mercado</div>
             </div>
           </div>

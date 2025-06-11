@@ -57,8 +57,8 @@ const Hero = () => {
                 <h3 className="text-2xl font-bold mb-2">🔥 OFERTA ESPECIAL</h3>
                 <p className="text-lg font-semibold mb-2">Kit Bomba por apenas</p>
                 <div className="flex items-center justify-center gap-3 mb-2">
-                  <span className="text-2xl line-through text-gray-600">R$ 140,00</span>
-                  <span className="text-4xl font-bold text-red-600">R$ 120,00</span>
+                  <span className="text-2xl line-through text-gray-600">R$ 120,00</span>
+                  <span className="text-4xl font-bold text-red-600">R$ 114,00</span>
                 </div>
                 <p className="text-sm font-medium">+ Desconto Progressivo: Quanto mais kits, maior o desconto!</p>
               </div>

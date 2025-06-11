@@ -110,7 +110,6 @@ const PricingOffer = () => {
                 <div className="space-y-2 text-sm mb-6">
                   <div>✅ {offer.kits} Base Bomba (12ml cada)</div>
                   <div>✅ {offer.kits} Fluido Bomba (60ml cada)</div>
-                  <div>✅ Entrega 3-14 dias (consulte regiões)</div>
                   <div>✅ Garantia de Resultados</div>
                 </div>
 
