@@ -36,43 +36,43 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="diferenciais" className="py-16 px-4 bg-white">
+    <section id="diferenciais" className="py-12 sm:py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Por que o <span className="text-pink-600">Kit Bomba</span> é Diferente?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Mais de 5.000 mulheres já comprovaram a eficácia da nossa fórmula exclusiva. 
             Veja os benefícios que você vai conquistar:
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {benefits.map((benefit, index) => (
-            <div key={index} className="text-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <div key={index} className="text-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="mb-4">
-                <div className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center`}>
-                  <benefit.icon className={`w-8 h-8 ${benefit.color}`} />
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center`}>
+                  <benefit.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${benefit.color}`} />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{benefit.description}</p>
             </div>
           ))}
         </div>
 
         {/* Comparação Antes/Depois */}
-        <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+        <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-6 sm:p-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
             Veja a Transformação Real
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="bg-red-100 rounded-xl p-6 mb-4">
-                <h4 className="text-lg font-bold text-red-700 mb-3">❌ ANTES (Unhas Fracas)</h4>
-                <ul className="text-sm text-red-600 space-y-2">
+              <div className="bg-red-100 rounded-xl p-4 sm:p-6 mb-4">
+                <h4 className="text-base sm:text-lg font-bold text-red-700 mb-3">❌ ANTES (Unhas Fracas)</h4>
+                <ul className="text-xs sm:text-sm text-red-600 space-y-2">
                   <li>• Unhas quebradiças e descascando</li>
                   <li>• Crescimento lento ou inexistente</li>
                   <li>• Aspecto ressecado e sem vida</li>
@@ -82,9 +82,9 @@ const Benefits = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-green-100 rounded-xl p-6 mb-4">
-                <h4 className="text-lg font-bold text-green-700 mb-3">✅ DEPOIS (Com Kit Bomba)</h4>
-                <ul className="text-sm text-green-600 space-y-2">
+              <div className="bg-green-100 rounded-xl p-4 sm:p-6 mb-4">
+                <h4 className="text-base sm:text-lg font-bold text-green-700 mb-3">✅ DEPOIS (Com Kit Bomba)</h4>
+                <ul className="text-xs sm:text-sm text-green-600 space-y-2">
                   <li>• Unhas fortes e resistentes</li>
                   <li>• Crescimento acelerado e saudável</li>
                   <li>• Aspecto brilhante e nutrido</li>

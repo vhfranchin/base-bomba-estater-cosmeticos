@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -40,13 +41,13 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-16 px-4 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section id="faq" className="py-12 sm:py-16 px-4 bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Dúvidas <span className="text-pink-600">Frequentes</span>
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg sm:text-xl text-gray-600">
             Esclarecemos as principais dúvidas sobre o Kit Bomba
           </p>
         </div>
@@ -56,9 +57,9 @@ const FAQ = () => {
             <div key={index} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
               >
-                <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 pr-4">
                   {faq.question}
                 </h3>
                 {openItems.includes(index) ? (
@@ -69,8 +70,8 @@ const FAQ = () => {
               </button>
               
               {openItems.includes(index) && (
-                <div className="px-6 pb-4">
-                  <p className="text-gray-600 leading-relaxed">
+                <div className="px-4 sm:px-6 pb-3 sm:pb-4">
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                     {faq.answer}
                   </p>
                 </div>
@@ -79,15 +80,15 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Ainda tem dúvidas?</h3>
-            <p className="text-lg mb-6 opacity-90">
+        <div className="text-center mt-8 sm:mt-12">
+          <div className="bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-2xl p-6 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4">Ainda tem dúvidas?</h3>
+            <p className="text-base sm:text-lg mb-4 sm:mb-6 opacity-90">
               Nossa equipe está sempre disponível para ajudar você!
             </p>
             <button 
               onClick={() => window.open('https://wa.me/5511943703372?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20o%20Kit%20Bomba.%20Podem%20me%20ajudar?', '_blank')}
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-colors"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 sm:px-8 rounded-full transition-colors text-sm sm:text-base"
             >
               💬 Falar no WhatsApp
             </button>

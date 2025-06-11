@@ -30,17 +30,17 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/1afd9ed2-7365-4f60-8c1b-98186fca67cd.png"
               alt="Estater Cosméticos"
-              className="h-8 w-auto"
+              className="h-6 w-auto sm:h-8"
             />
           </div>
 
           {/* Desktop Menu - Centralized */}
-          <div className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden md:flex space-x-6 lg:space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-pink-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-pink-600 font-medium transition-colors text-sm lg:text-base"
               >
                 {item.label}
               </button>
@@ -65,7 +65,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 text-gray-700 hover:text-pink-600 font-medium transition-colors"
+                className="block w-full text-left py-3 px-2 text-gray-700 hover:text-pink-600 font-medium transition-colors"
               >
                 {item.label}
               </button>
