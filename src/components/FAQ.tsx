@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -16,7 +15,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Como usar o Kit Bomba corretamente?",
-      answer: "É muito simples! Primeiro aplique a Base Bomba como base fortalecedora, deixe secar por 2 minutos. Depois aplique o Fluido Bomba massageando suavemente nas unhas e cutículas. Use diariamente para melhores resultados."
+      answer: "É muito simples! Aplique a Base Bomba 3x na semana e o Fluido Bomba todos os dias para melhores resultados."
     },
     {
       question: "Em quanto tempo vou ver os resultados?",
