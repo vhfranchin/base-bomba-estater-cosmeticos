@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Kit Bomba</h3>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-              Especialistas em cuidados com as unhas há mais de 3 anos. 
+              Especialistas em cuidados com as unhas há mais de 5 anos. 
               Milhares de mulheres já transformaram suas unhas conosco.
             </p>
             <div className="flex gap-3">
@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+55 11 94370-3372</span>
+                <span>+55 88 98184-4084</span>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />

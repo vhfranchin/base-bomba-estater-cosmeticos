@@ -1,10 +1,9 @@
-
 import { Button } from '@/components/ui/button';
 import { Gift, Zap, Shield, Clock } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const PricingOffer = () => {
-  const whatsappLink = "https://wa.me/5511943703372?text=Olá!%20Tenho%20interesse%20no%20Kit%20Bomba%20para%20fortalecer%20minhas%20unhas.%20Pode%20me%20ajudar?";
+  const whatsappLink = "https://wa.me/5588981844084?text=Olá!%20Tenho%20interesse%20no%20Kit%20Bomba%20para%20fortalecer%20minhas%20unhas.%20Pode%20me%20ajudar?";
   
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
 
