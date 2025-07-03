@@ -3,7 +3,7 @@ import { Gift, Zap, Shield, Clock } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const PricingOffer = () => {
-  const whatsappLink = "https://wa.me/5588981844084?text=Olá!%20Tenho%20interesse%20no%20Kit%20Bomba%20para%20fortalecer%20minhas%20unhas.%20Pode%20me%20ajudar?";
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=5588981844084&text=Ol%C3%A1%21+Tenho+interesse+no+Kit+Bomba+para+fortalecer+minhas+unhas.+Pode+me+ajudar%3F&type=phone_number&app_absent=0";
   
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
 

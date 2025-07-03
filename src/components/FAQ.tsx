@@ -87,7 +87,7 @@ const FAQ = () => {
               Nossa equipe está sempre disponível para ajudar você!
             </p>
             <button 
-              onClick={() => window.open('https://wa.me/5588981844084?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20o%20Kit%20Bomba.%20Podem%20me%20ajudar?', '_blank')}
+              onClick={() => window.open('https://api.whatsapp.com/send/?phone=5588981844084&text=Ol%C3%A1%21+Tenho+algumas+d%C3%BAvidas+sobre+o+Kit+Bomba.+Podem+me+ajudar%3F&type=phone_number&app_absent=0', '_blank')}
               className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 sm:px-8 rounded-full transition-colors text-sm sm:text-base"
             >
               💬 Falar no WhatsApp

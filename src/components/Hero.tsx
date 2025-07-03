@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Star, Shield, CheckCircle } from 'lucide-react';
 
 const Hero = () => {
-  const whatsappLink = "https://wa.me/5588981844084?text=Olá!%20Tenho%20interesse%20no%20Kit%20Bomba%20para%20fortalecer%20minhas%20unhas.%20Pode%20me%20ajudar?";
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=5588981844084&text=Ol%C3%A1%21+Tenho+interesse+no+Kit+Bomba+para+fortalecer+minhas+unhas.+Pode+me+ajudar%3F&type=phone_number&app_absent=0";
 
   return (
     <section id="produto" className="bg-gradient-to-br from-pink-50 via-purple-50 to-pink-100 py-8 sm:py-12 px-4 mt-16">
